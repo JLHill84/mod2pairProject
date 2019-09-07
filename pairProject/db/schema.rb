@@ -12,6 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2019_09_06_211612) do
 
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.string "mpaa"
+    t.integer "stars"
+    t.integer "released"
+    t.string "posterURL"
+    t.string "trailerURL"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.integer "movieID"
     t.integer "userID"

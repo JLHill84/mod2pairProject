@@ -2,8 +2,14 @@
     <html>
         <body>
             <head></head>
-
-            <h1>Users</h1>
-
+            <div>
+                <div><h1><%= @movie.title %></h1></div>
+                <div><h4>Description: <%= @movie.description %></h4></div>
+                <div><h4>MPAA: <%= @movie.mpaa %></h4></div>
+                <div><h4>Stars: <%= @movie.stars %></h4></div>
+                <div><h4>Released: <%= @movie.released %></h4></div>
+                <div><img src=" <%= @movie.posterURL %> "></div>
+                <div><img src=" "><%= @movie.trailerURL %></div>
+            </div>
         </body>
     </html>

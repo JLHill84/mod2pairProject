@@ -1,9 +1,19 @@
 <!DOCTYPE html>
     <html>
-        <body>
-            <head></head>
+        <head>
+            <style>
 
-            <h1>Users</h1>
-
-        </body>
+            </style>
+        </head>
+            <body>
+                <div>
+                <div><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @movie.trailerURL %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    <div><h1><%= @movie.title %></h1></div>
+                    <div><h4>Description: <%= @movie.description %></h4></div>
+                    <div><h4>MPAA: <%= @movie.mpaa %></h4></div>
+                    <div><h4>Stars: <%= @movie.stars %></h4></div>
+                    <div><h4>Released: <%= @movie.released %></h4></div>
+                    <div class="image"><img src=" <%= @movie.posterURL %> " height="300"></div>
+                </div>
+            </body>
     </html>
