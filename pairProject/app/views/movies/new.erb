@@ -3,13 +3,18 @@
         <body>
             <head></head>
             <div>
-                <div><h1><%= @movie.title %></h1></div>
-                <div><h4>Description: <%= @movie.description %></h4></div>
-                <div><h4>MPAA: <%= @movie.mpaa %></h4></div>
-                <div><h4>Stars: <%= @movie.stars %></h4></div>
-                <div><h4>Released: <%= @movie.released %></h4></div>
-                <div><img src=" <%= @movie.posterURL %> "></div>
-                <div><img src=" "><%= @movie.trailerURL %></div>
+                <div>
+                    <%= form_with model: @movie, url: '/movies', method: 'post' do |form| %>
+                        <p>Title: <%= form.text_field :title %></p>
+                        <p>Description:  <%= form.text_area :description, size: "60x12" %></p>
+                        <p>MPAA Rating:  <%= form.text_field :mpaa %></p>
+                        <p>Release Date:  <%= form.text_field :released %></p>
+                        <p>Poster URL:  <%= form.text_field :posterURL %></p>
+                        <p>YouTube URL:  <%= form.text_field :trailerURL %></p>
+                        <p>How many stars? <%= select_tag(:stars, options_for_select([1,2,3,4,5])) %></p>
+                        <%= form.submit %>
+                    <% end %>
+                </div>
             </div>
         </body>
     </html>
