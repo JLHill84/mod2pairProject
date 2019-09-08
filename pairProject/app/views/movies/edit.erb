@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <head></head>
+            <div>
+                <div>
+                    <%= form_with model: @movie, url: "/movies/#{@movie.id}", method: 'patch' do |form| %>
+                        <p>Edited Description:  <%= form.text_area :description, size: "60x12" %></p>
+                        <p>Edited Title: <%= form.text_field :title %></p>
+                        <p>Edited MPAA Rating:  <%= form.text_field :mpaa %></p>
+                        <p>Edited Release Date:  <%= form.text_field :released %></p>
+                        <p>Edited Poster URL:  <%= form.text_field :posterURL %></p>
+                        <p>Edited YouTube URL:  <%= form.text_field :trailerURL %></p>
+                        <p>Edited How many stars? <%= select_tag(:stars, options_for_select([1,2,3,4,5])) %></p>
+                        <%= form.submit %>
+                    <% end %>
+                </div>
+            </div>
+        </body>
+    </html>

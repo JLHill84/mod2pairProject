@@ -23,8 +23,32 @@ class MoviesController < ApplicationController
             stars: params[:stars]
         })
         if @movie.save
-            redirect_to "/movies/#{@movie.id}", :notice => "Your movie was saved!"
+            redirect_to "/movies/#{@movie.id}"
         end
+    end
+
+    def edit
+        @movie = Movie.find(params[:id])
+    end
+
+    def update
+        @movie = Movie.find(params[:id])
+
+        if @movie.update_attributes({
+                title: params[:title],
+                description: params[:description],
+                mpaa: params[:mpaa],
+                released: params[:released],
+                posterURL: params[:posterURL],
+                trailerURL: params[:trailerURL],
+                stars: params[:stars]
+                })
+            redirect_to "/movies"
+        end
+    end
+
+    def destroy
+
     end
 
 end
