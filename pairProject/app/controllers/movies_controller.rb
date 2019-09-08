@@ -1,5 +1,8 @@
 class MoviesController < ApplicationController
 
+    # No delete/destroy method on purpose; full crud will
+    # be implemented in user model to demonstrate ability
+
     def index
         @movies = Movie.all
     end
