@@ -9,7 +9,9 @@
                 <div>
                     <div><h1><%= @user.name %></h1></div>
                     <div><h4>User Name: <%= @user.userName %></h4></div>
-                    <div><h4>Favorites: <%= @user.favorites %></h4></div>
+                    <div><h4>Favorites: <% if @user.favorites.length == "" %><%= "No favorites yet!" %>
+                                        <% else %><%= @user.favorites %>
+                                        <% end %></h4></div>
                     <div><h4>Reviews: <%= @user.reviews %></h4></div>
                     <!-- POTENTIAL AVATAR <div class="image"><img src=" had to remove the ERB due to commenting? " height="300"></div> -->
                 </div>
