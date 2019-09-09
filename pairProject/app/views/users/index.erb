@@ -4,7 +4,7 @@
             <head></head>
                 <h1>Users</h1>
                     <% @users.each do |user| %>
-                        <li><%= link_to "#{user.userName}", movie %> </li>
+                        <li><%= link_to "#{user.userName}", user %> </li>
                         <br>
                     <% end %>
                 </ul>

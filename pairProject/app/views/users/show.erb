@@ -1,9 +1,17 @@
 <!DOCTYPE html>
     <html>
-        <body>
-            <head></head>
+        <head>
+            <style>
 
-            <h1>Users</h1>
-
-        </body>
+            </style>
+        </head>
+            <body>
+                <div>
+                    <div><h1><%= @user.name %></h1></div>
+                    <div><h4>User Name: <%= @user.userName %></h4></div>
+                    <div><h4>Favorites: <%= @user.favorites %></h4></div>
+                    <div><h4>Reviews: <%= @user.reviews %></h4></div>
+                    <!-- POTENTIAL AVATAR <div class="image"><img src=" had to remove the ERB due to commenting? " height="300"></div> -->
+                </div>
+            </body>
     </html>

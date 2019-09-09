@@ -46,6 +46,7 @@ class MoviesController < ApplicationController
                 trailerURL: params[:trailerURL],
                 stars: params[:stars]
                 })
+            @movie.save
             redirect_to "/movies"
         end
     end
