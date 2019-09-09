@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_211612) do
+ActiveRecord::Schema.define(version: 2019_09_09_164303) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "movieID"
+    t.integer "userID"
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
@@ -35,7 +40,6 @@ ActiveRecord::Schema.define(version: 2019_09_06_211612) do
     t.string "userName"
     t.string "password"
     t.string "favorites"
-    t.string "reviews"
   end
 
 end

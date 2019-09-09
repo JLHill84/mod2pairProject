@@ -74,30 +74,26 @@ Movie.create({
         name: "Billy Jean",
         userName: "notMy",
         password: "lov3r",
-        favorites: Array.new,
-        reviews: Array.new
+        favorites: [],
     })
 
     User.create({
         name: "Billy Joel",
         userName: "pianoman",
         password: "comingtoSee",
-        favorites: Array.new,
-        reviews: Array.new
+        favorites: [],
     })
 
     User.create({
         name: "Josh Hill",
         userName: "JLHill84",
         password: "p@zw3rd",
-        favorites: Array.new,
-        reviews: Array.new
+        favorites: [],
     })
 
     User.create({
         name: "Norah Jane",
         userName: "porkalork",
         password: "Noodle123!",
-        favorites: Array.new,
-        reviews: Array.new
+        favorites: [],
     })

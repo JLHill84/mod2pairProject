@@ -5,7 +5,6 @@ class Users < ActiveRecord::Migration[5.2]
       t.string :userName
       t.string :password
       t.string :favorites
-      t.string :reviews
     end
   end
 end
