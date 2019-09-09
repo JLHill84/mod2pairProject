@@ -9,11 +9,16 @@
                 <div>
                     <div><h1><%= @user.name %></h1></div>
                     <div><h4>User Name: <%= @user.userName %></h4></div>
-                    <div><h4>Favorites: <% if @user.favorites == "" %><%= "No favorites yet!" %>
+                    <div><h4>Favorites: <% if @user.favorites.length == 0 %><%= "No favorites yet!" %>
                                         <% else %><%= @user.favorites %>
                                         <% end %></h4></div>
-                    <div><h4>Reviews: <%= @user.reviews %></h4></div>
+                    <div><h4>Reviews: <% if @user.reviews.length == 0 %><%= "No Reviews yet!" %>
+                                        <% else %><%= @user.reviews %>
+                                        <% end %></h4></div>
                     <!-- POTENTIAL AVATAR <div class="image"><img src=" had to remove the ERB due to commenting? " height="300"></div> -->
+                </div>
+                <div>
+                    <% link_to "Create Review?", "reviews#new"%>
                 </div>
             </body>
     </html>

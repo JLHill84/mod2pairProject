@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_09_09_164303) do
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "movieID"
-    t.integer "userID"
+    t.integer "movie_id"
+    t.integer "user_id"
   end
 
   create_table "movies", force: :cascade do |t|
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_09_09_164303) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "movieID"
-    t.integer "userID"
+    t.integer "movie_id"
+    t.integer "user_id"
     t.string "content"
     t.integer "rating"
     t.string "comment"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_09_09_164303) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "userName"
-    t.string "password"
+    t.string "password_digest"
   end
 
 end
