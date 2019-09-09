@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 2019_09_09_164303) do
     t.string "name"
     t.string "userName"
     t.string "password"
-    t.string "favorites"
   end
 
 end
