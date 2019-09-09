@@ -2,8 +2,18 @@
     <html>
         <body>
             <head></head>
+                <div>
+                    <h1>Review a Movie!</h1>
+                        <%= form_with url: new_review_path do |form| %>
+                            <p>Pick a Movie: <%= select_tag("Movie", options_for_select(Movie.all.collect{ |m| [m.title, m.id]})) %>
+                            <p><%= form.text_area :content %></p>
+                            <p>How many stars? <%= select_tag(:stars, options_for_select([1,2,3,4,5])) %></p>
+                            <%= form.submit%>
+                        <% end %>
+                </div>
 
-            <h1>Reviews</h1>
+
+
 
         </body>
     </html>

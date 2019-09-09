@@ -103,3 +103,9 @@ User.create({
     userName: "porkalork",
     password: "Noodle123!",
 })
+
+User.create({
+    name: "Israel Sanchez",
+    userName: "DArealest",
+    password: "Is092094"
+})

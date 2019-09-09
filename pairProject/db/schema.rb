@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2019_09_09_164303) do
     t.integer "movie_id"
     t.integer "user_id"
     t.string "content"
-    t.integer "rating"
+    t.integer "stars"
     t.string "comment"
   end
 
