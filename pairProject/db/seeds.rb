@@ -80,6 +80,16 @@ Movie.create({
     trailerURL: "TcMBFSGVi1c"
 })
 
+Movie.create({
+title: "Son of the Mask",
+description: "Tim Avery, an aspiring cartoonist, finds himself in a predicament when his dog stumbles upon the mask of Loki. Then after conceiving an infant son 'born of the mask', he discovers just how looney child raising can be.",
+mpaa: "PG",
+stars: 1,
+released: 2005,
+posterURL: "https://www.joblo.com/assets/images/oldsite/newsimages1/102141.jpg",
+trailerURL: "FKwtGHbpVDU"
+})
+
 User.create({
     name: "Billy Jean",
     userName: "notMy",
