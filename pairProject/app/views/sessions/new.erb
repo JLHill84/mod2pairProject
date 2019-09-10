@@ -4,13 +4,14 @@
             <body>
                 <div><h1>Please Login</h1></div>
                     <div>
-                        <%= form_with url: 'login' do |form| %>
+                        <%= form_with url: '/login' do |form| %>
                             <%= form.label :userName %>
                             <p><%= form.text_field :userName %></p>
                             <%= form.label :password %>
-                            <p><%= form.text_field :password %>
+                            <p><%= password_field_tag(:password) %>
                             <p><%= form.submit "Login" %></p>
                         <% end %>
+                        <h4>New User? <%= link_to 'Sign Up!', new_user_path(@user) %></h4>
                     </div>
             </body>
     </html>

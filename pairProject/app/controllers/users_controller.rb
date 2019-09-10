@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
     def index
         @users = User.all
     end
@@ -13,7 +14,23 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(name: params[:name], userName: params[:userName], password: params[:password])
+        @user = User.find_by(userName: params[:userName])
+        if @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            redirect_to "/users/#{@user.id}", notice: "Thank you for logging in!"
+        else
+            redirect_to '/users/new'
+        end
+    end
+
+    def login
+        @user = User.find_by(userName: params[:userName])
+        if @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            redirect_to "/users/#{@user.id}", notice: "Thank you for logging in!"
+        else
+            redirect_to '/users/new'
+        end
     end
 
     def edit

@@ -113,25 +113,25 @@ Movie.create({
 User.create({
     name: "Billy Jean",
     userName: "notMy",
-    password: "lov3r",
+    password: "lov3r"
 })
 
 User.create({
     name: "Billy Joel",
     userName: "pianoman",
-    password: "comingtoSee",
+    password: "comingtoSee"
 })
 
 User.create({
     name: "Josh Hill",
     userName: "JLHill84",
-    password: "p@zw3rd",
+    password: "test"
 })
 
 User.create({
     name: "Norah Jane",
     userName: "porkalork",
-    password: "Noodle123!",
+    password: "Noodle123!"
 })
 
 User.create({

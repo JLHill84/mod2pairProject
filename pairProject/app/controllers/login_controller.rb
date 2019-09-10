@@ -5,10 +5,31 @@ class LoginController < ApplicationController
     end
 
     def login
-        # @user =  User.find_by(userName: params[:userName])
-        # if @user.password_digest == Bcrypt::Password(params[:password])
-        #     session[:current_user] = @user
-        end
+
+    end
+
+    def show
+
+    end
+
+    def new
+
+    end
+
+    def create
+
+    end
+
+    def edit
+
+    end
+
+    def update
+
+    end
+
+    def delete
+
     end
 
 end

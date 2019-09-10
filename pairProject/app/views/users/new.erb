@@ -1,18 +1,18 @@
 <!DOCTYPE html>
     <html>
-        <body>
-            <head></head>
-            <h1>Create an Account</h1>
-            <div>
-                <div>
-                    <%= form_with model: @user, url: '/users', method: 'post' do |form| %>
-                        <p>Full Name: <%= form.text_field :name %></p>
-                        <p>User Name: <%= form.text_field :userName %></p>
-                        <p>Password:  <%= form.text_field :password %></p>
-                        <p>Confirm Password:  <%= form.text_field :password2%></p>
-                        <%= form.submit %>
-                    <% end %>
-                </div>
-            </div>
-        </body>
+        <head></head>
+            <body>
+                <h1>Create an Account</h1>
+                    <div>
+                        <div>
+                            <%= form_with model: @user, url: '/users', method: 'post' do |form| %>
+                                <p>Full Name: <%= form.text_field :name %></p>
+                                <p>User Name: <%= form.text_field :userName %></p>
+                                <p>Password:  <%= password_field_tag(:password) %></p>
+                                <p>Confirm Password:  <%= password_field_tag(:password2)%></p>
+                                <%= form.submit "Sign Up!" %>
+                            <% end %>
+                        </div>
+                    </div>
+            </body>
     </html>
