@@ -37,15 +37,16 @@ class MoviesController < ApplicationController
     def update
         @movie = Movie.find(params[:id])
 
-        if @movie.update_attributes({
-                title: params[:title],
-                description: params[:description],
-                mpaa: params[:mpaa],
-                released: params[:released],
-                posterURL: params[:posterURL],
-                trailerURL: params[:trailerURL],
+        if @movie.update({
+                title: params[:movie][:title],
+                description: params[:movie][:description],
+                mpaa: params[:movie][:mpaa],
+                released: params[:movie][:released],
+                posterURL: params[:movie][:posterURL],
+                trailerURL: params[:movie][:trailerURL],
                 stars: params[:stars]
                 })
+            # byebug
             @movie.save
             redirect_to "/movies"
         end

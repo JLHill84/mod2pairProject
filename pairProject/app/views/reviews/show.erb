@@ -1,9 +1,14 @@
 <!DOCTYPE html>
     <html>
-        <body>
-            <head></head>
-
-            <h1>Users</h1>
-
+        <head></head>
+            <body>
+                <div>
+                    <h1>Review</h1>
+                        <div><p>Author: <%= link_to "#{@user.userName}", "/users/#{@user.id}" %> </p></div>
+                        <div><p>Movie: <%= @movie.title %> </p></div>
+                        <div><p>Review: <%= @review.content %></p></div>
+                        <div><p><%= @review.stars%> out of 5 Stars!</div>
+                        <div><%= link_to "Edit Review?", "/reviews/#{@review.id}/edit" %> <%= link_to "Delete Review?", review_path(@review), method: :delete, data: { confirm: 'Are you sure?' } %></div>
+                </div>
         </body>
     </html>

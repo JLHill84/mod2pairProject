@@ -5,10 +5,10 @@
                 <div>
                     <h1>Review a Movie!</h1>
                         <%= form_with url: reviews_path do |form| %>
-                            <p>Pick a Movie: <%= select_tag("Movie", options_for_select(Movie.all.collect{ |m| [m.title, m.id]})) %>
+                            <p>Pick a Movie: <%= select_tag("movie_id", options_for_select(Movie.all.collect{ |m| [m.title, m.id]})) %>
                             <p><%= form.text_area :content %></p>
                             <p>How many stars? <%= select_tag(:stars, options_for_select([1,2,3,4,5])) %></p>
-                            <%= form.submit%>
+                            <%= form.submit data: { confirm: 'Are you sure?' } %>
                         <% end %>
                 </div>
 

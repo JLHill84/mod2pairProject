@@ -12,9 +12,11 @@
                     <div><h4>Favorites: <% if @user.favorites.length == 0 %><%= "No favorites yet!" %>
                                         <% else %><%= @user.favorites %>
                                         <% end %></h4></div>
-                    <div><h4>Reviews: <% if @user.reviews.length == 0 %><%= "No Reviews yet!" %>
-                                        <% else %><%= @user.reviews %>
-                                        <% end %></h4></div>
+                    <div><h4>Reviewed Movies: <% if @user.reviews.length == 0 %><%= "No Reviews yet!" %>
+                                        <% else %><ul><% @user.reviews.each do |review| %>
+                                            <li><%= link_to "#{review.movie.title}", "../reviews/#{review.id}" %></li>
+                                            <% end %>
+                                        <% end %></ul></h4></div>
                     <!-- POTENTIAL AVATAR <div class="image"><img src=" had to remove the ERB due to commenting? " height="300"></div> -->
                 </div>
                 <div>

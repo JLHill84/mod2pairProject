@@ -6,7 +6,9 @@
             <h1>Movies</h1>
                 <ul>
                     <% @movies.each do |movie| %>
-                        <li><%= link_to "#{movie.title}", movie %> </li>
+                        <li>
+                        <div class="image"><a href=<%= "/movies/#{movie.id}"  %> > <img src=" <%= movie.posterURL %> " height="300" /> </a></div>
+                        <%= link_to "#{movie.title}", movie %> </li>
                         <br>
                     <% end %>
                 </ul>

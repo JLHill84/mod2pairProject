@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <head></head>
+            <div>
+                <div>
+                    <%= form_with model: @review, url: "/reviews/#{@review.id}", method: 'patch' do |form| %>
+                        <p>Edited Content:  <%= form.text_area :content, size: "60x12" %></p>
+                        <p>Edited How many stars? <%= select_tag(:stars, options_for_select([1,2,3,4,5])) %></p>
+                        <%= form.submit data: { confirm: 'Are you sure?' } %>
+                    <% end %>
+                </div>
+            </div>
+        </body>
+    </html>

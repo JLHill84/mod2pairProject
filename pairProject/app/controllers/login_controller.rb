@@ -1,7 +1,7 @@
 class LoginController < ApplicationController
 
     def index
-
+        redirect_to('/sessions/new')
     end
 
     def login

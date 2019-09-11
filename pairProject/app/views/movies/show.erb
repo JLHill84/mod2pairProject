@@ -13,7 +13,8 @@
                     <div><h4>MPAA: <%= @movie.mpaa %></h4></div>
                     <div><h4>Stars: <%= @movie.stars %></h4></div>
                     <div><h4>Released: <%= @movie.released %></h4></div>
-                    <div class="image"><img src=" <%= @movie.posterURL %> " height="300"></div>
+                    <div><h4><%= link_to "Review this Movie", new_review_path %></h4></div>
+                    <h4><!-- ERB TAG DELETED CUZ COMMENTS link_to "Edit this Movie", edit_movie_path </h4></div> -->
                 </div>
             </body>
     </html>
