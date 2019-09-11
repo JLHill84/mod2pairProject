@@ -6,10 +6,10 @@
             <h1>Movies</h1>
                 <ul>
                     <% @movies.each do |movie| %>
-                        <li>
-                        <div class="image"><a href=<%= "/movies/#{movie.id}"  %> > <img src=" <%= movie.posterURL %> " height="300" /> </a></div>
-                        <%= link_to "#{movie.title}", movie %> </li>
-                        <br>
+                        <div>
+                            <div class="image"><a href=<%= "/movies/#{movie.id}"  %> > <img src=" <%= movie.posterURL %> " height="285" /> </a></div>
+                            <div><%= link_to "#{movie.title}", movie %></div>
+                        </div><br>
                     <% end %>
                 </ul>
         </body>
