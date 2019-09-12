@@ -4,7 +4,7 @@
             <body>
                 <div>
                     <h1>Review</h1>
-                        <div><p>Author: <%= link_to "#{@user.userName}", "/users/#{@user.id}" %> </p></div>
+                        <div><p>Author: <%= @user.userName %> </p></div>
                         <div><p>Movie: <%= @movie.title %> </p></div>
                         <div><p>Review: <%= @review.content %></p></div>
                         <div><p><%= @review.stars%> out of 5 Stars!</div>

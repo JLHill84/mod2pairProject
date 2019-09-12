@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#show'
   get '/logout' => 'sessions#destroy'
   get '/sessions/new' => 'sessions#new'
+  post '/favorites' => 'favorites#create'
 
 end

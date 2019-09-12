@@ -10,18 +10,21 @@
                     <div><h1><%= @user.name %></h1></div>
                     <div><h4>User Name: <%= @user.userName %></h4></div>
                     <div><h4>Favorites: <% if @user.favorites.length == 0 %><%= "No favorites yet!" %>
-                                        <% else %><%= @user.favorites %>
-                                        <% end %></h4></div>
+                                        <% else %><ul><% @user.favorites.each do |favorite| %>
+                                            <div><li><%= Movie.find(favorite.movie_id).title %></li></div>
+                                            <% end %>
+                                        <% end %></ul></h4></div>
                     <div><h4>Reviewed Movies: <% if @user.reviews.length == 0 %><%= "No Reviews yet!" %>
                                         <% else %><ul><% @user.reviews.each do |review| %>
-                                            <li><%= link_to "#{review.movie.title}", "../reviews/#{review.id}" %></li>
+                                            <div><li><%= link_to "#{review.movie.title}", "../reviews/#{review.id}" %></li></div>
                                             <% end %>
                                         <% end %></ul></h4></div>
                     <!-- POTENTIAL AVATAR <div class="image"><img src=" had to remove the ERB due to commenting? " height="300"></div> -->
                 </div>
                 <div>
-                    <%= link_to "Create Review?", new_review_path %><br />
-                    <%= link_to "View Movies", movies_path %>
+                    <div><%= link_to "Create Review?", new_review_path %></div>
+                    <div><%= link_to "View Movies", movies_path %></div>
+                    <div><%= link_to "Upload Movie", new_movie_path %></div>
                 </div>
             </body>
     </html>
